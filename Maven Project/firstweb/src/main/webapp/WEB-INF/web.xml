@@ -16,6 +16,12 @@
   	<description></description>
   	<servlet-class>firstweb.ListProduct</servlet-class>
   </servlet>
+  <servlet>
+  	<servlet-name>ExportProduct</servlet-name>
+  	<display-name>ExportProduct</display-name>
+  	<description></description>
+  	<servlet-class>firstweb.ExportProduct</servlet-class>
+  </servlet>
   <servlet-mapping>
   	<servlet-name>ServletDemo</servlet-name>
   	<url-pattern>/ServletDemo</url-pattern>
@@ -23,5 +29,9 @@
   <servlet-mapping>
   	<servlet-name>ListProduct</servlet-name>
   	<url-pattern>/ListProduct</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>ExportProduct</servlet-name>
+  	<url-pattern>/ExportProduct</url-pattern>
   </servlet-mapping>
 </web-app>

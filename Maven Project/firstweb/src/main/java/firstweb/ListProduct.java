@@ -30,7 +30,6 @@ public class ListProduct extends HttpServlet {
 				out.println("<td>" + p.getProductName() + "</d>");
 				out.println("<td>" + p.getPrice() + "</td>");
 				out.println("<td><img src='img/" + p.getPid() + ".jpg' width=150></body></html></td>");
-
 				out.println("</tr>");
 			}
 			out.println("</table>");
