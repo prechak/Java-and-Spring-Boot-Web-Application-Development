@@ -10,31 +10,31 @@ public class TeacherDB {
 
 	public static void main(String[] args) {
 		try {
-	        // 1. โหลด JDBC Driver
+	        // 1. get JDBC Driver
 	        Class.forName("com.mysql.cj.jdbc.Driver");
 	        
-	        // 2. กำหนด URL สำหรับติดต่อกับฐานข้อมูล
+	        // 2. Assign URL for connecting database
 	        String dbURL = "jdbc:mysql://localhost/registration?characterEncoding=utf-8";
 	        
-	        // 3. เชื่อมต่อกับฐานข้อมูล
+	        // 3. Database connection
 	        Connection con = DriverManager.getConnection(dbURL, "root", "P@ssw0rd");
 	        
-	        // 4. เตรียมคำสั่ง SQL ที่จะประมวลผล
+	        // 4. Prepare SQL command for processing
 	        PreparedStatement pStatement = con.prepareStatement("SELECT * FROM teacher"); 
-	        //pStatement.setInt(1, 3);
-	        //pStatement.setString(2, "g%");
-	        
-	        // 5. ส่งคำสั่ง SQL ไปยังฐานข้อมูล
+
+	        // 5. Assign SQL command to database
 	        ResultSet resultSet = pStatement.executeQuery();
 
-	        // 6. อ่านผลลัพธ์ที่ฐานข้อมูลส่งกลับ
+	        // 6. Get result at database and return 
 	        while (resultSet.next()) {
 	            int tid = resultSet.getInt("tid");  
 	            String tname = resultSet.getString("tname");
 	            String status = resultSet.getString("status");
+	            if(status.equals("s")) status = "single";
+	            else if(status.equals("m")) status = "married";
 	            System.out.println(tid + "," + tname + "," + status);
 	        }
-		// 7. ปิดการเชื่อมต่อ
+		// 7. Close connection
 	        con.close();
 
 	    } catch (ClassNotFoundException e) {
