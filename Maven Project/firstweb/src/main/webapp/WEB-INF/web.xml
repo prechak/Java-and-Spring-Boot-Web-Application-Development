@@ -10,8 +10,18 @@
   	<description></description>
   	<servlet-class>firstweb.ServletDemo</servlet-class>
   </servlet>
+  <servlet>
+  	<servlet-name>ListProduct</servlet-name>
+  	<display-name>ListProduct</display-name>
+  	<description></description>
+  	<servlet-class>firstweb.ListProduct</servlet-class>
+  </servlet>
   <servlet-mapping>
   	<servlet-name>ServletDemo</servlet-name>
   	<url-pattern>/ServletDemo</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>ListProduct</servlet-name>
+  	<url-pattern>/ListProduct</url-pattern>
   </servlet-mapping>
 </web-app>
