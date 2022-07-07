@@ -20,8 +20,13 @@ public class TeacherDB {
 	        Connection con = DriverManager.getConnection(dbURL, "root", "P@ssw0rd");
 	        
 	        // 4. Prepare SQL command for processing
-	        PreparedStatement pStatement = con.prepareStatement("SELECT * FROM teacher"); 
-
+	        //PreparedStatement pStatement = con.prepareStatement("SELECT * FROM teacher"); 
+	        PreparedStatement pStatement = con.prepareStatement("insert into registration.teacher (tname, status) values (?, ?)"); 
+	        pStatement.setString(1, "คง");
+	        pStatement.setString(2, "m");
+	        
+	        pStatement.executeUpdate();
+/*
 	        // 5. Assign SQL command to database
 	        ResultSet resultSet = pStatement.executeQuery();
 
@@ -34,6 +39,7 @@ public class TeacherDB {
 	            else if(status.equals("m")) status = "married";
 	            System.out.println(tid + "," + tname + "," + status);
 	        }
+*/
 		// 7. Close connection
 	        con.close();
 
