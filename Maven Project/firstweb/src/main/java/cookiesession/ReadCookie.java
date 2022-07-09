@@ -1,7 +1,6 @@
 package cookiesession;
 
 import java.io.IOException;
-
 import javax.servlet.ServletException;
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServlet;
@@ -15,7 +14,7 @@ public class ReadCookie extends HttpServlet{
 		
 		Cookie c[] = request.getCookies();
 		for(Cookie cookie : c) {
-			System.out.println( cookie.getName() + " " + cookie.getValue());
+			System.out.println( cookie.getName() + "-" + cookie.getValue());
 		}
 	
 	}

@@ -16,6 +16,9 @@ public class WriteCookie extends HttpServlet {
 
 		Cookie count = new Cookie("count", "0");	// "name", "value"
 		response.addCookie(count);
+		
+		Cookie man = new Cookie("Prasert", "79");
+		response.addCookie(man);
 	}
 
 }
