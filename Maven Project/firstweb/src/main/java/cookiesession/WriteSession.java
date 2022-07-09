@@ -2,20 +2,18 @@ package cookiesession;
 
 import java.io.IOException;
 import javax.servlet.ServletException;
-import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
-public class ReadCookie extends HttpServlet{
+public class WriteSession extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
-		Cookie c[] = request.getCookies();
-		for(Cookie cookie : c) {
-			System.out.println( cookie.getName() + " - " + cookie.getValue());
-		}
-	
+
+		HttpSession session = request.getSession();
+		System.out.println(session.getId());	// J SessionId Sever automate generate
 	}
+
 }
