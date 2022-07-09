@@ -28,6 +28,12 @@
   	<description></description>
   	<servlet-class>cookiesession.WriteCookie</servlet-class>
   </servlet>
+  <servlet>
+  	<servlet-name>ReadCookie</servlet-name>
+  	<display-name>ReadCookie</display-name>
+  	<description></description>
+  	<servlet-class>cookiesession.ReadCookie</servlet-class>
+  </servlet>
   <servlet-mapping>
   	<servlet-name>ServletDemo</servlet-name>
   	<url-pattern>/ServletDemo</url-pattern>
@@ -43,5 +49,9 @@
   <servlet-mapping>
   	<servlet-name>WriteCookie</servlet-name>
   	<url-pattern>/WriteCookie</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>ReadCookie</servlet-name>
+  	<url-pattern>/ReadCookie</url-pattern>
   </servlet-mapping>
 </web-app>
