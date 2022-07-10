@@ -52,6 +52,12 @@
   	<description></description>
   	<servlet-class>cookiesession.ReadSession</servlet-class>
   </servlet>
+  <servlet>
+  	<servlet-name>DetailController</servlet-name>
+  	<display-name>DetailController</display-name>
+  	<description></description>
+  	<servlet-class>controller.DetailController</servlet-class>
+  </servlet>
   <servlet-mapping>
   	<servlet-name>ServletDemo</servlet-name>
   	<url-pattern>/ServletDemo</url-pattern>
@@ -83,5 +89,9 @@
   <servlet-mapping>
   	<servlet-name>ReadSession</servlet-name>
   	<url-pattern>/ReadSession</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>DetailController</servlet-name>
+  	<url-pattern>/DetailController</url-pattern>
   </servlet-mapping>
 </web-app>

@@ -1,4 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=utf-8" pageEncoding="utf-8" %>
+<%@ page import="firstweb.*" %>
 
 <!DOCTYPE html>
 <html>
@@ -8,29 +9,15 @@
 </head>
 <body>
 
-<select>
-<%-- <%for(int i=2565; i >= 2499; i--){ %>
-	<option>
-		<% out.println(i); %>
-	</option>
-<% } %> --%>
-
-<!-- OR -->
-
 <%
-int i;
-for(i=2565; i >= 2499; i--){
-	out.println("<option>" + i + "</option>");
-}
-
+	Product result = (Product)request.getAttribute("result"); /* ต้องสอดคล้องกับ setAttribute ใน Controller 
+	และต้อง Casting and import*/	
 %>
-</select>
-<b><%=i%></b>
+	<%=result.getProductName() %>
 
-<!-- build-in parameter / test.jsp?fname=... -->
-<% String fname = request.getParameter("fname");
-	out.println("<br>" + fname);
-%>	
+<select>
+
+</select>
 
 </body>
 </html>
