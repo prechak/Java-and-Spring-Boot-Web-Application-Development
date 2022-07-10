@@ -14,6 +14,7 @@ public class WriteSession extends HttpServlet {
 
 		HttpSession session = request.getSession();
 		System.out.println(session.getId());	// J SessionId Sever automate generate
+		session.setAttribute("c_user", request.getParameter("user"));
 	}
 
 }
