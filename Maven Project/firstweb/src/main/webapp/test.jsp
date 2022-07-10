@@ -27,7 +27,10 @@ for(i=2565; i >= 2499; i--){
 </select>
 <b><%=i%></b>
 
-Name : <% request.getParameter("kname"); %>	<!-- build-in parameter / test.jsp?fname=... -->
+<!-- build-in parameter / test.jsp?fname=... -->
+<% String fname = request.getParameter("fname");
+	out.println("<br>" + fname);
+%>	
 
 </body>
 </html>
