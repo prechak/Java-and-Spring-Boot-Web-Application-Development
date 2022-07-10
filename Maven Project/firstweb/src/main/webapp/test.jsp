@@ -13,8 +13,9 @@
 	Product result = (Product)request.getAttribute("result"); /* ต้องสอดคล้องกับ setAttribute ใน Controller 
 	และต้อง Casting and import*/	
 %>
-	<%=result.getProductName() %>
-
+	<br><%=result.getProductName() %>
+	<br><%=result.getProductDetail() %>
+	<br><%=result.getPrice() %> บาท
 <select>
 
 </select>
