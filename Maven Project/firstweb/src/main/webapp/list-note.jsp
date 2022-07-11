@@ -18,5 +18,10 @@
 	}
 %>
 
+<form action="">
+	<input type= "text" name="detail">
+	<input type= "submit">
+</form>
+
 </body>
 </html>
