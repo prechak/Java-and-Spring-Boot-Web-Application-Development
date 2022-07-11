@@ -58,6 +58,12 @@
   	<description></description>
   	<servlet-class>controller.DetailController</servlet-class>
   </servlet>
+  <servlet>
+  	<servlet-name>ListController</servlet-name>
+  	<display-name>ListController</display-name>
+  	<description></description>
+  	<servlet-class>controller.ListController</servlet-class>
+  </servlet>
   <servlet-mapping>
   	<servlet-name>ServletDemo</servlet-name>
   	<url-pattern>/ServletDemo</url-pattern>
@@ -93,5 +99,9 @@
   <servlet-mapping>
   	<servlet-name>DetailController</servlet-name>
   	<url-pattern>/DetailController</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>ListController</servlet-name>
+  	<url-pattern>/ListController</url-pattern>
   </servlet-mapping>
 </web-app>
